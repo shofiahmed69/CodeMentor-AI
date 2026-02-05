@@ -1,0 +1,16 @@
+{
+  "name": "codementor-ai-backend",
+  "version": "1.0.0",
+  "description": "Lightweight proxy for CodeMentor AI → Ollama",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.2.0"
+  }
+}

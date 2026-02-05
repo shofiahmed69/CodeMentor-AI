@@ -1,0 +1,7 @@
+.code-block-wrapper pre {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+}
+
+.code-block-wrapper button {
+  font-size: 0.75rem;
+}
