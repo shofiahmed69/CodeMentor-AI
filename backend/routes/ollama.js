@@ -11,7 +11,12 @@ const DEFAULT_NUM_PREDICT = Number(process.env.OLLAMA_NUM_PREDICT) || 2048;
  */
 function sanitizeInput(str) {
   if (typeof str !== 'string') return '';
-  return str.slice(0, 50000).replace(/\0/g, '');
+  // Limit length and strip null bytes.
+  // We don't strip HTML here to avoid mangling code snippets (e.g. "a < b");
+  // the frontend (react-markdown) is responsible for safe rendering.
+  return str
+    .slice(0, 50000)
+    .replace(/\0/g, '');
 }
 
 /**
